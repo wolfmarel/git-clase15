@@ -1,0 +1,539 @@
+/* Desarrollado por Wolfmarel Adan */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: linear-gradient(#97dfe2b8,#f1a5e1a0,rgba(247, 245, 186, 0.782));
+    margin-bottom: 5%;
+}
+
+/*ESTILOS GENERALES*/
+
+header{
+    background-image: url(img/papelrasgado2.png);
+    background-position:center bottom;
+    background-size: 100% 100%;
+    padding-top: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    margin-top: 0px;
+} 
+
+.menuNuevo{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 26px;
+    font-family: 'Rum Raisin', sans-serif;
+    z-index: 2;/*Para que esté por encima de los botones de desplazamiento del carrusel*/
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #fe4186b3;
+    margin-bottom: 15px;
+}
+
+.carrusel{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.tarjeta{
+    background-color: rgba(255, 255, 255, 0.544);
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    color: #fe4185;
+    text-align: right;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+.menu a{
+    color: #fe4185;
+    font-size: 28px;
+    font-family: 'Rum Raisin', sans-serif;
+    text-decoration: none;
+    margin: 10px;
+}
+.menu a:hover ul {
+    display:block;
+    position: absolute;
+}
+.menu a{
+    transition: background-image 2s;
+}
+.menu a:hover{
+    background-image: linear-gradient(#5ce1e6,#fff);
+    border-radius: 8px;
+}
+.logoWhatsapp{
+    position: sticky;
+    top: 15%;
+    transition: all 2s;
+}
+.logoWhatsapp:hover{
+    transform: rotate(90deg);
+}
+.linkWhatsapp{
+    width: 50px;
+    margin-left: 94%;
+}
+h1 {
+    color: black;
+    font-family: 'Englebert', sans-serif;
+    text-decoration: underline overline;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.mainFlex{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 100px;
+}
+
+/* SUB MENÚ */
+    
+.subMenu {
+    display: none;
+    z-index: 1;
+}
+.subMenu li:hover {
+    background-color: #fff;
+    color: rgb(73, 73, 124);
+}
+
+.subMenu li {
+    display: block;
+    background-color: #5ce1e6;
+    text-align: left;
+    border-radius: 8px;
+    border: 1px solid #fff84a;
+}
+.labelInformacion{
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+/*FOOTER*/
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 2px;
+    background-color: #5ce1e6;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.redesFooter{
+    transition: all 2s;
+    width: 25px;
+    height: 25px;
+}
+.redesFooter:hover{
+    transform: skew(-10deg,-10deg);
+}
+.labelFooter{
+    font-family: 'Rum Raisin', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    display: inline;
+    padding-right: 40%;
+    animation-duration: 4s;
+    animation-name: aparecerFooter;
+    transition: font-size 2s;
+}
+@keyframes aparecerFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.labelFooter:hover{
+    font-size: 25px;
+}
+footer div{
+    text-align: left;
+    display: inline;
+}
+
+/*INDEX*/
+
+/* .videoPortada video{
+    width: 70%;
+    padding-left: 15%;
+} */
+
+.sectionProductosFlex{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.tituloInternoContenido{
+    color: black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding-top: 3%;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+#indexImagenesProductos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    text-decoration: underline;
+}
+
+.imagenesIndex:hover{
+    transform: scale(1.1,1.1);
+}
+
+.fotoChefIndex{
+    width: 100%;
+}
+
+.sectionFlex{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-top: 10px;
+    width: 70%;
+}
+
+.leerMas{
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+}
+
+.parrafoIndex{
+    text-align: justify;
+    /* width: 90%; */
+    font-family: 'Advent Pro', sans-serif;
+}
+.mapa{
+    border:0px;
+    height: 280px;
+    width: 100%;
+}
+
+/*PRODUCTOS*/
+
+#imagenesProductos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+#informacionProductos{
+    display: grid;
+    grid-template-columns:1fr 1fr 2fr 2fr;
+    grid-template-rows: 1fr repeat(3, 2fr);
+    column-gap: 10px;
+    row-gap: 5px;
+    width: 60%;
+}
+.labelPregunta{
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 25px;
+    background-color: #fe4185;
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+}
+.textoListas{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    list-style-position: inside;
+}
+
+.listaIngredientes{
+    list-style-image: url(img/iconocupcake2.png);
+}
+.listaComprar{
+    list-style-image: url(img/iconochef2.png);
+}
+
+/*NOSOTROS*/
+
+.sectionFlexNosotros{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 80%;
+}
+.cursiva{
+    font-style: italic;
+}
+
+.parrafoNosotrosExt{
+    text-align: justify;
+    width: 90%;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+}
+
+.fotoWolfNosotros{
+    border-style: double groove;
+    border-width: 5px;
+    border-color: #fff84a;
+}
+
+/*PREGUNTAS*/
+.gridPreguntas{
+    display: grid;
+    grid-template-columns:1fr 2fr;/* columnas */
+    grid-template-rows: repeat(5, 2fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 60%;
+}
+
+/*CONTACTO*/
+.gridContacto{
+    display: grid;
+    grid-template-columns:3fr 3fr;/* columnas */
+    grid-template-rows: repeat(3, 0.8fr) 3fr repeat(2, 0.8fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 80%;
+}
+.labelTitulos{
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+    text-align: right;
+}
+.boton{
+    border-radius: 5px;
+    background-image: linear-gradient(#fe4185, white);
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+    transition: background-image 2s;
+    color: black;
+}
+.boton:hover{
+    background-image: linear-gradient(#fff84a, white);
+    color: black;
+}
+
+/*GRIDS PARA RESPONSIVE*/
+
+/* Nombrar las areas */
+header {
+    grid-area: encabezado;
+
+}
+#contenido {
+    grid-area: contenido;
+}
+footer {
+    grid-area: pie;
+}
+/* RESPONSIVE */
+
+/* MEDIA QUERIES */
+
+/* SMARTPHONE */
+@media (max-width: 599px){
+    header{
+        background-image: none;
+        flex-direction: column;
+        position: relative;
+    }
+    /* .logo{
+        width: 153px;
+        height: 84px;
+    } */
+    .bodyGrid {
+        display: grid;
+        grid-template-areas: 
+        /* Armo la grilla por areas */
+        "encabezado"
+        "contenido"
+        "pie"
+        ;
+        /* tamaño */
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr;
+        /* espacios */
+        column-gap: 0px;
+        row-gap: 25px;
+        margin-bottom: 100px;
+    }
+    .menu{
+        text-align: center;
+    }
+    .articleContacto{
+        padding-top: 5%;
+    }
+    .menu li{
+        display: inline;
+        padding: 5px;
+    }
+    .menu a{
+        font-size: 20px;
+    }
+    h1 {
+        color: black;
+        font-family: 'Englebert', sans-serif;
+        text-decoration: underline overline;
+        font-size: 15px;
+        text-align: center;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    #indexImagenesProductos img{
+        transform: scale(0.8,0.8);
+    }
+    .linkWhatsapp{
+        display: none;
+    }
+    .textoVerMas{
+        display: inline;
+    }
+    .imgVerMas{
+        display: none;
+    }
+    /* .tituloInternoContenido{
+        font-size: 25px;
+    }
+    .parrafoIndex{
+        font-size: 15px;
+    } */
+    .sectionFlex img{
+        width: 180px;
+        height: 225px;
+    }
+    .labelFooter{
+        padding-right: 18%;
+    }
+    .subMenu{
+        display: none;
+    }
+    .menu a:hover ul {
+        display:none;
+    }
+}
+/* TABLET */
+@media (min-width: 600px) and (max-width: 1023px){
+    header{
+        background-image: none;
+        flex-direction: column;
+        position: relative;
+    }
+    /* .logo{
+        width: 250px;
+        height: 134px;
+    } */
+    .bodyGrid {
+        display: grid;
+        grid-template-areas: 
+        /* Armo la grilla por areas */
+        "encabezado"
+        "contenido"
+        "pie"
+        ;
+        /* tamaño */
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr;
+        /* espacios */
+        column-gap: 0px;
+        row-gap: 35px;
+        margin-bottom: 100px;
+    }
+    .menu{
+        text-align: center;
+    }
+    .menu li{
+        display: inline;
+        padding: 5px;
+    }
+    .menu a{
+        font-size: 23px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .linkWhatsapp{
+        display: none;
+    }
+    .textoVerMas{
+        display: inline;
+    }
+    .imgVerMas{
+        display: none;
+    }
+    /* .tituloInternoContenido{
+        font-size: 30px;
+    }
+    .parrafoIndex{
+        font-size: 19px;
+    } */
+    .sectionFlex img{
+        width: 210px;
+        height: 255px;
+    }
+    .labelFooter{
+        padding-right: 18%;
+    }
+    .subMenu{
+        display: none;
+    }
+    .menu a:hover ul {
+        display:none;
+    }
+}
+/* DESKTOP */
+@media (min-width: 1024px){
+    /* bloque de estilos para desktop*/
+
+    .bodyGrid {
+        display: grid;
+        grid-template-areas: 
+        /* Armo la grilla por areas */
+        "encabezado"
+        "contenido"
+        "pie"
+        ;
+        /* tamaño */
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 0.5fr;
+        /* espacios */
+        column-gap: 0px;
+    }
+    
+    .labelFooter{
+        padding-right: 40%;
+    }
+    .textoVerMas{
+        display: none;
+    }
+    .imgVerMas{
+        display: inline;
+    }
+}
